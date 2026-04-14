@@ -1,103 +1,133 @@
-# Project_matrix
-Data science project of Honda Sales Data Analysis.
-# ☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️☑️
+# 🏍️ Project Matrix — Honda Sales Data Analysis
 
-⸻
+A data science project focused on cleaning, analyzing, and visualizing Honda sales data using **Python**, **Pandas**, **NumPy**, **Matplotlib**, and **Seaborn**.
 
-# 🧹 1. Data Cleaning (using Pandas + Regex)
+---
 
-✔️ Basic Cleaning
-	•	Convert Order_Date → datetime
-	•	✅Check missing values (isnull())
-	•	✅Remove duplicates
-	•	✅Fix data types (int, float)
+## 📁 Project Structure
 
-✔️ Column-wise Cleaning
-	•	✅Customer_Age → remove unrealistic values (like <18 or >80)
-	•	✅Customer_Gender → standardize (Male/Female only)
+```
+project_matrix/
+├── data/
+│   └── honda_sales.csv
+├── notebooks/
+│   └── honda_sales_analysis.ipynb
+├── visuals/
+│   └── (generated charts)
+└── README.md
+```
 
-✔️ Using Regex (important 🔥)
-	•	Extract year/month from date if needed
-	•	Clean text columns:
-	•	✅Dealer names → remove extra spaces
-	•	Standardize city/state names
-	•	Example:
+---
 
+## ✅ Progress Tracker
+
+| Task | Status |
+|------|--------|
+| Data Cleaning | ✅ Done |
+| Sales Analysis | ✅ Done |
+| Customer Analysis | ✅ Done |
+| Visualizations | ✅ Done |
+| Business Insights | 🔄 In Progress |
+| Profit Prediction | 🔄 In Progress |
+
+---
+
+## 🧹 1. Data Cleaning
+
+### Basic Cleaning
+- Convert `Order_Date` → `datetime`
+- Check missing values using `isnull()`
+- Remove duplicate records
+- Fix data types (`int`, `float`)
+
+### Column-wise Cleaning
+- `Customer_Age` → Remove unrealistic values (age `< 18` or `> 80`)
+- `Customer_Gender` → Standardize to `Male` / `Female` only
+
+### Regex Cleaning 🔥
+- Extract year/month from date columns
+- Clean dealer names (remove extra whitespace)
+- Standardize city/state names
+
+```python
 import re
 df['City'] = df['City'].str.replace(r'\s+', ' ', regex=True)
+```
 
+---
 
-⸻
+## 📊 2. Analysis
 
-# 📊 2. Analysis You Can Do
+### 💰 Sales Analysis
+- Total sales by **Year / Month**
+- Total sales by **State / City**
 
-💰 Sales Analysis
-	•	✅Total sales by:
-	•	✅Year / Month
-	•	✅State / City
-	•	✅
+### 👥 Customer Analysis
+- Age distribution across buyers
+- Gender-wise purchase breakdown
+- Preferred payment methods
 
-👥 Customer Analysis
-	•	Age distribution
-	•	✅Gender-wise purchases
-	•	✅Preferred payment methods
+### 🚀 Business Insights
+- Which bike model generates the highest profit
+- Which city generates maximum revenue
+- Online vs Showroom sales comparison
 
-🚀 Business Insights
-	•	Which bike gives highest profit
-	•	Which city generates max revenue
-	•	Online vs Showroom sales comparison
+### ⏱️ Operational Insights
+- Delivery days vs customer rating
+- Does faster delivery correlate with better ratings?
 
-⏱️ Operational Insights
-	✅•	Delivery days vs customer rating
-	✅•	Does faster delivery = better rating?
+---
 
-⸻
+## 📈 3. Visualizations
 
-# 📈 3. Visualizations (Matplotlib + Seaborn)
+### 📅 Sales Trends
+- **Line Chart** → Sales over time
+- **Pie Chart** → Payment mode distribution (UPI / Cash / Credit Card)
 
-📅 Sales Trends
-	•	✅Line chart → Sales over time
-	•	✅Payment_Mode → Make a pie-chart (UPI, Cash, Credit Card) to check what percentage of costomer using which payment methord
+### 🏆 Top Models / Cities
+- **Bar Chart** → Top bike models by sales
+- **Bar Chart** → Top cities by revenue
 
-⸻
+### 👥 Customer Insights
+- **Pie Chart** → Gender distribution
+- **Bar Chart** → Age distribution
 
-🏆 Top Models / Cities
-	•	✅Bar chart → Top bike models / cities
+---
 
-⸻
+## 🚀 4. Feature Engineering
 
-👥 Customer Insights
-	•	✅Pie chart → Gender distribution
-	•	✅bargram → Age distribution
+Create a new `Profit_Percent` column:
 
-⸻
-
-
-
-⸻
-
-
-# 🚀•	Create new column:
-
+```python
 df['Profit_Percent'] = (df['Gross_Profit'] / df['Cost_Price']) * 100
+```
 
-	•	Predict:
-	•	Which factors affect profit most
-	•	Which customers are likely to buy expensive bikes
+### Prediction Goals
+- Identify which factors affect profit the most
+- Predict which customers are likely to buy expensive bikes
 
-⸻
+---
 
-# ⭐ Final Summary
+## 🛠️ Tech Stack
 
-With this dataset you can:
-	•	Clean data using Pandas + Regex
-	•	Analyze trends using NumPy + Pandas
-	•	Visualize insights using Matplotlib + Seaborn
+| Tool | Purpose |
+|------|---------|
+| `Pandas` | Data manipulation & cleaning |
+| `NumPy` | Numerical analysis |
+| `Matplotlib` | Data visualization |
+| `Seaborn` | Statistical plots |
+| `Regex` | Text cleaning & pattern matching |
 
+---
 
+## ⭐ Summary
 
-⸻
+With this dataset, this project demonstrates how to:
+- **Clean** raw sales data using Pandas + Regex
+- **Analyze** trends and patterns using NumPy + Pandas
+- **Visualize** actionable insights using Matplotlib + Seaborn
+- **Engineer features** to enable profit prediction and customer segmentation
 
+---
 
-# 🌟
-![image.png](attachment:image.png)
+> 📌 *Project by: [Team Data-Matrix] | Dataset: Honda Sales Data*
