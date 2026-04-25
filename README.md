@@ -27,8 +27,8 @@ project_matrix/
 | Sales Analysis | ✅ Done |
 | Customer Analysis | ✅ Done |
 | Visualizations | ✅ Done |
-| Business Insights | 🔄 In Progress |
-| Profit Prediction | 🔄 In Progress |
+| Business Insights | ✅ Done |
+| Profit Prediction | ✅ Done |
 
 ---
 
